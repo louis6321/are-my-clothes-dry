@@ -3,7 +3,7 @@
 Watches a Tapo P110 smart plug that a clothes dryer is plugged into, and sends Pushover notifications:
 
 - **Dryer started** (low priority, silent) as soon as it draws more than 10 W.
-- **Dryer stopped** (normal priority) once it has stayed at or below 10 W for a minute. It doesn't claim the clothes are dry, because the dryer can also stop early, such as on a safety cut-out.
+- **Dryer stopped** (normal priority) once it has stayed at or below 10 W for 20 seconds. It doesn't claim the clothes are dry, because the dryer can also stop early, such as on a safety cut-out.
 
 It keeps running and re-arms for the next load. Every "started" is followed by a "stopped", however short the run.
 
@@ -33,10 +33,10 @@ The plug is read over the local network, so this has to run on a machine on the 
 | Flag | Env var | Default | Meaning |
 | --- | --- | --- | --- |
 | `--threshold` | `DRYER_THRESHOLD_W` | 10 | The dryer counts as running above this many watts |
-| `--idle-time` | `DRYER_IDLE_TIME_S` | 60 | Seconds at or below the threshold before it counts as stopped |
+| `--idle-time` | `DRYER_IDLE_TIME_S` | 20 | Seconds at or below the threshold before it counts as stopped |
 | `--poll-interval` | `DRYER_POLL_INTERVAL_S` | 10 | Seconds between readings |
 
-If the plug can't be reached for 5 minutes, you get one notification saying so. It re-arms once the plug responds again.
+If the plug can't be reached for 5 minutes while the dryer is running, you get one notification saying so. It re-arms once the plug responds again. Outages while the dryer is idle are only logged.
 
 ## Running on a Raspberry Pi (systemd)
 

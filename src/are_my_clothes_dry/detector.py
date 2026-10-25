@@ -24,11 +24,16 @@ class DryerDetector:
     `CycleStopped`. Every `CycleStarted` is followed by a `CycleStopped`.
     """
 
-    def __init__(self, threshold_w: float = 10, idle_after_s: float = 60) -> None:
+    def __init__(self, threshold_w: float = 10, idle_after_s: float = 20) -> None:
         self.threshold_w = threshold_w
         self.idle_after_s = idle_after_s
         self._run_started: float | None = None
         self._below_since: float | None = None
+
+    @property
+    def running(self) -> bool:
+        """True between a `CycleStarted` and its `CycleStopped`."""
+        return self._run_started is not None
 
     def update(self, now: float, watts: float) -> Event | None:
         above = watts > self.threshold_w

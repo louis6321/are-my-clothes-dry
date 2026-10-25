@@ -53,7 +53,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         help="the dryer is running above this draw (default: %(default)s W)",
     )
     monitor.add_argument(
-        "--idle-time", type=float, metavar="SECONDS", default=os.environ.get("DRYER_IDLE_TIME_S", "60"),
+        "--idle-time", type=float, metavar="SECONDS", default=os.environ.get("DRYER_IDLE_TIME_S", "20"),
         help="how long it must stay at or below the threshold to count as stopped (default: %(default)s s)",
     )
     monitor.add_argument(
@@ -91,11 +91,12 @@ async def monitor_command(args: argparse.Namespace) -> None:
             if failing_since is None:
                 failing_since = now
             log.warning("%s", e)
-            if not alerted and now - failing_since >= UNREACHABLE_ALERT_S:
+            # Only worth a notification if a "stopped" one is now overdue.
+            if detector.running and not alerted and now - failing_since >= UNREACHABLE_ALERT_S:
                 alerted = await notify(
                     pushover,
-                    f"Can't reach the dryer's smart plug at {plug.host}. "
-                    "Dryer notifications are paused until it's back.",
+                    f"Lost contact with the dryer's smart plug at {plug.host} while the dryer was running. "
+                    "You won't get a stopped notification until it's back.",
                 )
         else:
             if failing_since is not None:
