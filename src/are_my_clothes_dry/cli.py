@@ -7,7 +7,7 @@ import os
 import sys
 import time
 
-from .detector import CycleFinished, CycleStarted, DryerDetector
+from .detector import CycleStarted, CycleStopped, DryerDetector
 from .plug import Plug, PlugError
 from .pushover import Pushover, PushoverError
 
@@ -41,7 +41,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
     parser = argparse.ArgumentParser(
         prog="are-my-clothes-dry",
-        description="Send a Pushover notification when the dryer on a Tapo P110 plug finishes.",
+        description="Send Pushover notifications when the dryer on a Tapo P110 plug starts and stops.",
     )
     commands = parser.add_subparsers(title="commands", metavar="COMMAND")
 
@@ -54,7 +54,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     )
     monitor.add_argument(
         "--idle-time", type=float, metavar="SECONDS", default=os.environ.get("DRYER_IDLE_TIME_S", "60"),
-        help="how long it must stay at or below the threshold to count as finished (default: %(default)s s)",
+        help="how long it must stay at or below the threshold to count as stopped (default: %(default)s s)",
     )
     monitor.add_argument(
         "--poll-interval", type=float, metavar="SECONDS", default=os.environ.get("DRYER_POLL_INTERVAL_S", "10"),
@@ -77,7 +77,7 @@ async def monitor_command(args: argparse.Namespace) -> None:
     pushover = pushover_from_env()
     detector = DryerDetector(args.threshold, args.idle_time)
     log.info(
-        "Watching plug at %s: running above %g W, finished after %gs idle",
+        "Watching plug at %s: running above %g W, stopped after %gs idle",
         plug.host, args.threshold, args.idle_time,
     )
 
@@ -113,10 +113,10 @@ async def handle_reading(detector: DryerDetector, pushover: Pushover, now: float
     if isinstance(event, CycleStarted):
         log.info("Dryer started (%d W)", watts)
         await notify(pushover, "Dryer started.", priority=-1)
-    elif isinstance(event, CycleFinished):
+    elif isinstance(event, CycleStopped):
         duration = format_duration(event.duration_s)
-        log.info("Dryer finished after %s", duration)
-        await notify(pushover, f"Yes! The dryer finished after {duration}.")
+        log.info("Dryer stopped after %s", duration)
+        await notify(pushover, f"Dryer stopped after {duration}.")
 
 
 async def notify(pushover: Pushover, message: str, priority: int = 0) -> bool:

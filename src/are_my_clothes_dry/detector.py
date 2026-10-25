@@ -9,11 +9,11 @@ class CycleStarted:
 
 
 @dataclass(frozen=True)
-class CycleFinished:
+class CycleStopped:
     duration_s: float
 
 
-Event = CycleStarted | CycleFinished
+Event = CycleStarted | CycleStopped
 
 
 class DryerDetector:
@@ -21,7 +21,7 @@ class DryerDetector:
 
     A run starts on the first reading above `threshold_w`, emitting `CycleStarted`.
     It ends after `idle_after_s` of readings at or below the threshold, emitting
-    `CycleFinished`. Every `CycleStarted` is followed by a `CycleFinished`.
+    `CycleStopped`. Every `CycleStarted` is followed by a `CycleStopped`.
     """
 
     def __init__(self, threshold_w: float = 10, idle_after_s: float = 60) -> None:
@@ -51,4 +51,4 @@ class DryerDetector:
         duration_s = self._below_since - self._run_started
         self._run_started = None
         self._below_since = None
-        return CycleFinished(duration_s)
+        return CycleStopped(duration_s)

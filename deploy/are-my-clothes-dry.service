@@ -1,6 +1,6 @@
 # Edit User= and the /home/pi/are-my-clothes-dry paths to match your setup.
 [Unit]
-Description=Are my clothes dry? (dryer finished notifier)
+Description=Are my clothes dry? (dryer notifier)
 Wants=network-online.target
 After=network-online.target
 

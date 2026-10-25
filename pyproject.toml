@@ -1,7 +1,7 @@
 [project]
 name = "are-my-clothes-dry"
 version = "0.1.0"
-description = "Pushover notification when the dryer on a Tapo P110 smart plug finishes"
+description = "Pushover notifications when the dryer on a Tapo P110 smart plug starts and stops"
 readme = "README.md"
 authors = [
     { name = "Louis6321", email = "me@louis.au" }
