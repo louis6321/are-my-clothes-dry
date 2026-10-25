@@ -1,0 +1,24 @@
+[project]
+name = "are-my-clothes-dry"
+version = "0.1.0"
+description = "Pushover notification when the dryer on a Tapo P110 smart plug finishes"
+readme = "README.md"
+authors = [
+    { name = "Louis6321", email = "me@louis.au" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "tapo>=0.12.0",
+]
+
+[project.scripts]
+are-my-clothes-dry = "are_my_clothes_dry.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

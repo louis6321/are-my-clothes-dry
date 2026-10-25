@@ -1,0 +1,17 @@
+# Edit User= and the /home/pi/are-my-clothes-dry paths to match your setup.
+[Unit]
+Description=Are my clothes dry? (dryer finished notifier)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/are-my-clothes-dry
+EnvironmentFile=/home/pi/are-my-clothes-dry/.env
+ExecStart=/home/pi/are-my-clothes-dry/.venv/bin/are-my-clothes-dry monitor
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

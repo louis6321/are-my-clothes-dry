@@ -1,0 +1,186 @@
+version = 1
+revision = 5
+requires-python = ">=3.11"
+
+[[package]]
+name = "are-my-clothes-dry"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "tapo" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "tapo", specifier = ">=0.12.0" }]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.1.1" }]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
+]
+
+[[package]]
+name = "iniconfig"
+version = "2.3.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/01/e1/2069291243c926a2ff1cd706c7f3eeb9b62144bf60f77c9fb9ff2fb26bd3/iniconfig-2.3.1.tar.gz", hash = "sha256:67f4b9c50da0dedf52af349e7749a80a9057a5031199791b906c3bb3ae878960", size = 21209, upload-time = "2026-10-06T22:48:38.076Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/56/43/4ca9e49d27a1fcf6bece6f6aec0ea46bb9112489b93d4b688fb415457bdb/iniconfig-2.3.1-py3-none-any.whl", hash = "sha256:9121e2c1fdb355232495be3194c8dfe87ccc2d5dee45947b78e68f499790d7a7", size = 7552, upload-time = "2026-10-06T22:48:36.959Z" },
+]
+
+[[package]]
+name = "packaging"
+version = "26.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz", hash = "sha256:94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79", size = 313412, upload-time = "2026-08-04T18:15:28.737Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl", hash = "sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c", size = 129956, upload-time = "2026-08-04T18:15:27.159Z" },
+]
+
+[[package]]
+name = "pluggy"
+version = "1.7.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bf/db/7fc19e6f2dc92a966727031389fc2e08b558f0f25eb7403c1119ad4713cd/pluggy-1.7.0.tar.gz", hash = "sha256:d1eaa46ebb595891b860ab086b4d09c8588af65ebd4361b8e8f4bb8920b90ba8", size = 123304, upload-time = "2026-10-15T09:50:58.343Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/40/9e/2b38731e0fc536806f16490e1a12d7f0dc2a1235aa8cc07bcc75416a7daa/pluggy-1.7.0-py3-none-any.whl", hash = "sha256:7dd7b0d8832ba3cb632c306926ded123429211b83641b35dc5c41ad2d34f9bec", size = 27082, upload-time = "2026-10-15T09:50:56.808Z" },
+]
+
+[[package]]
+name = "pygments"
+version = "2.21.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz", hash = "sha256:610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c", size = 5005329, upload-time = "2026-08-17T08:02:48.824Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl", hash = "sha256:2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9", size = 1250147, upload-time = "2026-08-17T08:02:44.912Z" },
+]
+
+[[package]]
+name = "pytest"
+version = "9.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "iniconfig" },
+    { name = "packaging" },
+    { name = "pluggy" },
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e4/47/b9efed96c114afcfa3c9d3fe98a76a1d14c74a9e266d397cf6eb64be5e01/pytest-9.1.1.tar.gz", hash = "sha256:1088fbde8f2b49d95a549a195707afa7a76a3ce9bcadc26b6d71f0ffda5fe313", size = 1636369, upload-time = "2026-06-19T10:58:32.857Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/24/25/1de2678b631f5a49215c6c96fff41ba892b0a34df68d6d80292b1b48aa7f/pytest-9.1.1-py3-none-any.whl", hash = "sha256:37a86b45efb9a47a61a36449063e8e18d0cab3161329fc099eb21783169c4f0c", size = 386536, upload-time = "2026-06-19T10:58:31.347Z" },
+]
+
+[[package]]
+name = "tapo"
+version = "0.12.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "tzdata" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b8/2f/3c27d8d46fd4da523491e388356f1f77b67645f8d189e5e3fb73a1b81779/tapo-0.12.0.tar.gz", hash = "sha256:0b559fc511156b493eb0d5a79d665638e87cfb6b5640b672590b19470d44d8c0", size = 363187, upload-time = "2026-10-24T16:50:06.687Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/80/a3/17be0dbdba2313c6d08f8210a3684c011449bc7249dfbbf196c393b74482/tapo-0.12.0-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:e31b6934ed589dfc37447f39fd6a76d0a953d59aa917350eeb487f4fd697e856", size = 6627973, upload-time = "2026-10-24T16:47:51.088Z" },
+    { url = "https://files.pythonhosted.org/packages/96/2f/e21b38233f2391bc11cbf99aa686bd7878540cd7a0cab18407f4aed39921/tapo-0.12.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:025972951734c9993c9b7e69a2ebf18d4f47288188bfc990852213515534885a", size = 6406650, upload-time = "2026-10-24T16:47:53.089Z" },
+    { url = "https://files.pythonhosted.org/packages/bd/55/b3b723bcb7a82a80899ab2580ded54af93ae0f2849823f89c5e0804fc0ea/tapo-0.12.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:8141c82b056a053860aac7138fbc5a47a9153aff789cf452ef0132659f3a6ca6", size = 6573983, upload-time = "2026-10-24T16:47:54.806Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/4d/7a000509472c23b19a39dec2c1789a2edda2b0c023325a945b8a6c3e2436/tapo-0.12.0-cp311-cp311-manylinux_2_28_armv7l.whl", hash = "sha256:af98973ffcadb4ba7ca9bd1361cb91b85f70334c858f2004a2e6ec533f9c3a27", size = 6091738, upload-time = "2026-10-24T16:47:56.476Z" },
+    { url = "https://files.pythonhosted.org/packages/a0/93/cfac3bba8fe2178c200eba3d6ee70c581ce16131501bd7927077b3b91476/tapo-0.12.0-cp311-cp311-manylinux_2_28_i686.whl", hash = "sha256:2575786f9b58241e8a2e56dbbf0d44012ec5d445f0ebec96ad3c4a7af7f786d4", size = 6924965, upload-time = "2026-10-24T16:47:58.161Z" },
+    { url = "https://files.pythonhosted.org/packages/77/95/991d0af8b261381d2ae983a4f0da13fb98a28df35cdc757d2809c3841662/tapo-0.12.0-cp311-cp311-manylinux_2_28_ppc64le.whl", hash = "sha256:4948f9d3502b9b9e88af2e57a20685e0c892775b0ddead17cee9047916127040", size = 7209864, upload-time = "2026-10-24T16:47:59.95Z" },
+    { url = "https://files.pythonhosted.org/packages/de/cb/eba5b0abfaed2098dc6497234036a0c239a5bb570f50c33bb173b991ba90/tapo-0.12.0-cp311-cp311-manylinux_2_28_s390x.whl", hash = "sha256:57d415dadca6e6979dce67b136c85c7b2055a5153575bdfb976cc8c108b5531b", size = 6612187, upload-time = "2026-10-24T16:48:01.401Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/87/4808181f6019312eb619698cbd3e3de88b269b35ba49a97691f429b480da/tapo-0.12.0-cp311-cp311-manylinux_2_28_x86_64.whl", hash = "sha256:fd738dbddc80acd6566492740412b1cc5d17beab1f27f1476bcbc99b2337ab79", size = 6970986, upload-time = "2026-10-24T16:48:02.851Z" },
+    { url = "https://files.pythonhosted.org/packages/0a/b4/52e9544d44312f9006216686e00fad3af691a0e7e6d97cb86cdca024b0a0/tapo-0.12.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:add6dea81a540beed9aeedff1ae97c2d5d7bb21233041bfae7f2e4b3fda8212f", size = 6759180, upload-time = "2026-10-24T16:48:04.701Z" },
+    { url = "https://files.pythonhosted.org/packages/06/82/b0afcd813f2a8bfb6feeeb5e0cb6d6fae6ad849239e7de6ec235c23a4d40/tapo-0.12.0-cp311-cp311-musllinux_1_2_armv7l.whl", hash = "sha256:d97e74f35aa14eee3f7ef5df64d63687252493bf43e339be6fffc87d1f536904", size = 6291106, upload-time = "2026-10-24T16:48:06.43Z" },
+    { url = "https://files.pythonhosted.org/packages/dd/ff/de4e4f0f0965354dbc25a5915aec0434531142ecb46fc67432c64dff5b41/tapo-0.12.0-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:6e1c71a36d74169c1312faa2074b8a1d8ee7282e5f2b4c26a01eb5a04b59aa57", size = 6801648, upload-time = "2026-10-24T16:48:07.993Z" },
+    { url = "https://files.pythonhosted.org/packages/d1/c2/05ecc5cbcbb5488e105f477b171d6f78383f0249dfa0bdd0f18e12301e51/tapo-0.12.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:0ca90530e4fef73b2cf7209ced91057140865c8c4e8fd13ce9b086a8ea44a425", size = 7191531, upload-time = "2026-10-24T16:48:09.752Z" },
+    { url = "https://files.pythonhosted.org/packages/56/53/68bf4b667bfdec9d8cda2a051dc01df6755680d2d31577fef4476f92cf5e/tapo-0.12.0-cp311-cp311-win_amd64.whl", hash = "sha256:e46b78bcbbc4899ff7bae8a4a383ee8baad2f53cdad0a91dfd709c67960f3417", size = 7364857, upload-time = "2026-10-24T16:48:11.272Z" },
+    { url = "https://files.pythonhosted.org/packages/a1/67/9e5fc076068b23201de15681820136bbb142bf010c4f6a4eb72c2066152b/tapo-0.12.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:40ee906ae06dcb2b53b1bbed0edbd058e135a24e6c93b55c9b33264d66b98c4a", size = 6657620, upload-time = "2026-10-24T16:48:12.918Z" },
+    { url = "https://files.pythonhosted.org/packages/29/e9/0c9c98745261a5c5e47130e4a25b4b5e229e3ca4ad156f87a5a2e8edad0c/tapo-0.12.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:7edbd03b5f2cc84a9c1a0557cf73cef548e23870463994879545ee467910f402", size = 6383614, upload-time = "2026-10-24T16:48:14.422Z" },
+    { url = "https://files.pythonhosted.org/packages/3c/36/ced8c382166d284ed51593ae804ebb9047f6f9c32ad318c98154ff30d5ef/tapo-0.12.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:bcfccc15723be1611a4b56621e3a5ceb6c97cdd28c257991e9dbff5e5ceefd94", size = 6579912, upload-time = "2026-10-24T16:48:16.059Z" },
+    { url = "https://files.pythonhosted.org/packages/ad/b5/40419343b9f38c9d7563d3acb4166d4cacca35957e0e68e4b08af7d6110b/tapo-0.12.0-cp312-cp312-manylinux_2_28_armv7l.whl", hash = "sha256:d50ebeb6bf9dc82df4ee4505cab6bfd16b86696445dc57151ef4fe6d81da7459", size = 6109069, upload-time = "2026-10-24T16:48:17.894Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/6a/6f0965fdc5302a1a295e0a5168114b335456acc60d66010b7cc806bd3b59/tapo-0.12.0-cp312-cp312-manylinux_2_28_i686.whl", hash = "sha256:147d08ad47a003db695ce83606ee7ed97b3333c875c3c503ae89fd37be42197f", size = 6936766, upload-time = "2026-10-24T16:48:19.676Z" },
+    { url = "https://files.pythonhosted.org/packages/58/f9/8624273cddaba1665e84f92f9efa8750fbda66f0062025556b298b53e0cd/tapo-0.12.0-cp312-cp312-manylinux_2_28_ppc64le.whl", hash = "sha256:6e614d34635b273283388f07d10a489a267de7bf50e6f933921334a73ea1a56a", size = 7198028, upload-time = "2026-10-24T16:48:21.083Z" },
+    { url = "https://files.pythonhosted.org/packages/d8/9e/36fe4df097295678623a277c1c93aae16733f537b0a2d06450e82be71a65/tapo-0.12.0-cp312-cp312-manylinux_2_28_s390x.whl", hash = "sha256:09c7bc5001cfe8cd35771eefa9446e8306f6a25aaaa108690b3279daa67d4e8e", size = 6608703, upload-time = "2026-10-24T16:48:22.543Z" },
+    { url = "https://files.pythonhosted.org/packages/58/4c/e9a719136dc8fbd6af1b0ddb6a07a31677d44e1ba2f9710da55504a4b035/tapo-0.12.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:b539916b66b8f40e66d576d6917524031bd08fa128c63e6e1b0ab569fc226746", size = 6976923, upload-time = "2026-10-24T16:48:23.865Z" },
+    { url = "https://files.pythonhosted.org/packages/21/10/161133390c6da642a6c60d88b71b7323c1ac92c739c40db7c30f75d252f2/tapo-0.12.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:da43a3689a97289ad54e52ddd8258698c55b4f20344de601a9b8ea191103c6c2", size = 6765691, upload-time = "2026-10-24T16:48:25.532Z" },
+    { url = "https://files.pythonhosted.org/packages/39/cf/2ccda3f2a728b3e5594d78fe126cb312635b9485e3e83201ce9e0730cac2/tapo-0.12.0-cp312-cp312-musllinux_1_2_armv7l.whl", hash = "sha256:98c124b9101ab0fe66873aa1635142b7dcf4b340ce6ba5dfdbeea0ee8344a13a", size = 6307911, upload-time = "2026-10-24T16:48:26.915Z" },
+    { url = "https://files.pythonhosted.org/packages/42/75/a424ca977b7c18f911c14a8abef2701eba48188126a04fb6e3970819001f/tapo-0.12.0-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:208867c308692137756becf58612a4c1275dcbf0afebfa9300f4bc2b0f338b28", size = 6807658, upload-time = "2026-10-24T16:48:28.621Z" },
+    { url = "https://files.pythonhosted.org/packages/15/c3/0f41b0897865aa39803b90c34fd5f280c1a2a8fdf6638d054e64e431fd2a/tapo-0.12.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:6b8e4d950a5fa41f5e7b1fc718522687e25030f0001cf4b8d5cf8289eb1018e8", size = 7195341, upload-time = "2026-10-24T16:48:30.458Z" },
+    { url = "https://files.pythonhosted.org/packages/41/b7/27caa39cc8dda5730b9bea0fe188bc81ac4f0add44b99a16bbdb51c0919b/tapo-0.12.0-cp312-cp312-win_amd64.whl", hash = "sha256:7d5f8551fe9211f7b74576fe721903695425abb1e0a8ff51a8295e5f5724ea5d", size = 7350579, upload-time = "2026-10-24T16:48:31.922Z" },
+    { url = "https://files.pythonhosted.org/packages/24/0c/450c2395dd7e31867bb36d47e4da31460ee7bc89d76961281c8de1cec0d3/tapo-0.12.0-cp312-cp312-win_arm64.whl", hash = "sha256:422edc187dbff45b1201366818740ab0d330c2a25193ae2e83d32081841faf21", size = 6888818, upload-time = "2026-10-24T16:48:33.459Z" },
+    { url = "https://files.pythonhosted.org/packages/01/d2/c026eb3e5d5acb2dd6bc9ef1574da7bcd1f964e5ebd88cfd3f423c7d9f51/tapo-0.12.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:1341e6bedfd87802ccb4ec0ed4b814c5942e35295c58122e095bce61c646ea21", size = 6656107, upload-time = "2026-10-24T16:48:34.857Z" },
+    { url = "https://files.pythonhosted.org/packages/81/a9/4d65fe43da892b2be4049e9b20e4f32523cf45aa59b1067cabcc4b2d0ba0/tapo-0.12.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:94fe6cc5a10608650d6d120120761d6f72c61a8623664f81c5671d95ee6fade3", size = 6382754, upload-time = "2026-10-24T16:48:36.33Z" },
+    { url = "https://files.pythonhosted.org/packages/09/95/27887cb915134a5df59011fd909591e7eb7119dce7a175dfa03b039af95e/tapo-0.12.0-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:16f2b3480470f0e42f9aa8180a2160cc5d138f844533386bb4d786975ffe6359", size = 6584779, upload-time = "2026-10-24T16:48:38.083Z" },
+    { url = "https://files.pythonhosted.org/packages/1f/56/5ae82942dd0bd0a1eccbe548d1959eb1833fb3d3b22a4ac24e114c006193/tapo-0.12.0-cp313-cp313-manylinux_2_28_armv7l.whl", hash = "sha256:849b0885df3f1d5fbd43d845dbc07eae745a70927b77c3c05745b2901b8429eb", size = 6106959, upload-time = "2026-10-24T16:48:39.748Z" },
+    { url = "https://files.pythonhosted.org/packages/a8/30/3c35124a9d19347009103ed53d1364ae8815ba85752b90b61439c0373ba3/tapo-0.12.0-cp313-cp313-manylinux_2_28_i686.whl", hash = "sha256:ffe33cd51dc645545a90c400986c6bc299a5569534c94070d9be86a7507fada0", size = 6943714, upload-time = "2026-10-24T16:48:41.74Z" },
+    { url = "https://files.pythonhosted.org/packages/01/e9/980aac1bc076c2dd7ad0d73faf3cd1f053c848f7ff6d2038b531b90942f1/tapo-0.12.0-cp313-cp313-manylinux_2_28_ppc64le.whl", hash = "sha256:eb7e58979b97b07396fdddad7f4130539ff8dba9fdd931a005faf30720bab23c", size = 7192029, upload-time = "2026-10-24T16:48:43.266Z" },
+    { url = "https://files.pythonhosted.org/packages/c3/8d/44fa649a7941a083d5235f8b5a7aa8ba13adf4ef342af5e002a422b527e2/tapo-0.12.0-cp313-cp313-manylinux_2_28_s390x.whl", hash = "sha256:e5fc69dca7e75dfb24eb2f55663b37a321557cbb8373c64b4d9a0e9b85409f32", size = 6590536, upload-time = "2026-10-24T16:48:44.777Z" },
+    { url = "https://files.pythonhosted.org/packages/d6/31/3dd4800373e43faa94f677568e5f0c71995e25a1a34d5d17dbb15c49c383/tapo-0.12.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:e251f6ff3912308f1627f21bb398b332f14b26b96f0915e22dfbfc13e3861d55", size = 6975780, upload-time = "2026-10-24T16:48:46.283Z" },
+    { url = "https://files.pythonhosted.org/packages/fb/7a/e0d904ff19ca4c971eb054f26945f01c128352ca3fe20e98c838847e6354/tapo-0.12.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:8a70e52782a4efd41cc0241b39b233dff45c24fe5886531612149085d9c059db", size = 6766027, upload-time = "2026-10-24T16:48:48.315Z" },
+    { url = "https://files.pythonhosted.org/packages/75/aa/dc517ed38218cde62eeb0815c7f50616da3edef89746d0815cf2d7225a23/tapo-0.12.0-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:9731e0b81d4a4ea3c39e1420dc7d4d0e4a9d9d11670b608c1d76695fa3d7d862", size = 6302792, upload-time = "2026-10-24T16:48:49.826Z" },
+    { url = "https://files.pythonhosted.org/packages/97/d9/55c9b83368c471a03581279276aa436d032544f79d121ed99a9d5f561194/tapo-0.12.0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:1ef1c4d88d802055de010f4ef6b86a505bbe883b2a37f71410f341dfce91bd03", size = 6816961, upload-time = "2026-10-24T16:48:51.327Z" },
+    { url = "https://files.pythonhosted.org/packages/0a/92/c5c17ff9f7c5c5b49e719a386d5045328ec77d4236382a5666f582c8267b/tapo-0.12.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:893a7b56889e3d06c9b8a05582e85de37259c7a92aab2adce45fded420279820", size = 7194797, upload-time = "2026-10-24T16:48:52.829Z" },
+    { url = "https://files.pythonhosted.org/packages/ce/27/cc6cc15ec1d07f85d9248a88da86087092e72aefff750d4d63333df2b747/tapo-0.12.0-cp313-cp313-win32.whl", hash = "sha256:827ec82cdf8b21259ca3e9e07eed50fbae58604afe47438f2a5c681872753e3b", size = 6156118, upload-time = "2026-10-24T16:48:54.751Z" },
+    { url = "https://files.pythonhosted.org/packages/23/1f/502ac4b235ecdfeb0becb3b78a6886dfdd486064208c9294d35f68d426d0/tapo-0.12.0-cp313-cp313-win_amd64.whl", hash = "sha256:a222948ed2f13289a66dc948bbf24603436627306cc071e9e49a13ca658ba62c", size = 7350408, upload-time = "2026-10-24T16:48:56.2Z" },
+    { url = "https://files.pythonhosted.org/packages/4d/47/c32f4bbf89a310d4fe1ca1b0c64d277d9ca3e301bb4d307354fc35f2b4bb/tapo-0.12.0-cp313-cp313-win_arm64.whl", hash = "sha256:d6a82749bbdc51bb43cb83ebe10fa12faa5e225f7d11165d59a5905bd5f89dfb", size = 6885013, upload-time = "2026-10-24T16:48:57.764Z" },
+    { url = "https://files.pythonhosted.org/packages/fd/f1/fe42dad2da5a56d53081b47b458ba02ead5d75c539f5311801a8deae2654/tapo-0.12.0-cp314-cp314-macosx_10_12_x86_64.whl", hash = "sha256:7b551a6a82a0ad2113c6c589e7b2181e80ec33c25672dca7db3fa78634f09c30", size = 6697581, upload-time = "2026-10-24T16:48:59.114Z" },
+    { url = "https://files.pythonhosted.org/packages/d9/d4/139bacc226a92e2fa412b45bd1e4e1835331b15517de479befe9aeac62ca/tapo-0.12.0-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:6deb29e99137e82053fdab1d3d0f8ee65bf450074a958ae0eb8730519ca9c16a", size = 6381635, upload-time = "2026-10-24T16:49:00.517Z" },
+    { url = "https://files.pythonhosted.org/packages/e6/eb/8750602876790cc5b8f9cf5139c4ca12e221fb33268e5f272a93c98ccbe2/tapo-0.12.0-cp314-cp314-manylinux_2_28_aarch64.whl", hash = "sha256:93f5ebab87b4ff833587338529d0649c3c79ecaf02c248c4f26a099e98beb062", size = 6555984, upload-time = "2026-10-24T16:49:02.244Z" },
+    { url = "https://files.pythonhosted.org/packages/53/85/2ba7538f66850badcf0c34a88693e4b0d36e9601e0d31e0f9d16a1ef0877/tapo-0.12.0-cp314-cp314-manylinux_2_28_armv7l.whl", hash = "sha256:d6045091d876470b7f9ecbdf5b954e4600f424ff8a5689249097dbace4a16ef7", size = 6107749, upload-time = "2026-10-24T16:49:04.207Z" },
+    { url = "https://files.pythonhosted.org/packages/17/4a/4d99a2925cfbe9e213c901e8914385b9d9dd68a0ac249ae74346f862adbb/tapo-0.12.0-cp314-cp314-manylinux_2_28_i686.whl", hash = "sha256:5ff06fc860709d6d41d6f77a5dc961a63bd6c9e8bc89475ce41ecd0b4c75e7ad", size = 6944477, upload-time = "2026-10-24T16:49:05.696Z" },
+    { url = "https://files.pythonhosted.org/packages/64/1b/7ef5dbf674361c02acb4b6a981608d318711e3c3014f12f0354d18541dad/tapo-0.12.0-cp314-cp314-manylinux_2_28_ppc64le.whl", hash = "sha256:4216b4ff4df2359d9d8d2b32531a6ee6caf20447f585ed109a930c20dadd539c", size = 7202994, upload-time = "2026-10-24T16:49:07.351Z" },
+    { url = "https://files.pythonhosted.org/packages/96/b3/62919c11a16350294741bc62e9a319e0e7168a21e7aa72c1d6731497b1b7/tapo-0.12.0-cp314-cp314-manylinux_2_28_s390x.whl", hash = "sha256:c867b68241c4116b03f899206b1de2ddeee76f3e577eb66614fb83eaf2af0729", size = 6592157, upload-time = "2026-10-24T16:49:08.841Z" },
+    { url = "https://files.pythonhosted.org/packages/53/0a/fb97cc2c688cca0b9acbd45ed9501418cf6b2e07dba7bd3f29df2c50011d/tapo-0.12.0-cp314-cp314-manylinux_2_28_x86_64.whl", hash = "sha256:259b63a9aaa6d29dfd33bbd524073c0ab7f083f80761548c52a85bfa68db2736", size = 6958255, upload-time = "2026-10-24T16:49:10.288Z" },
+    { url = "https://files.pythonhosted.org/packages/a2/2d/bd635969c8ad440939df2c186f9189198607adc50267247c89ca0533dd6e/tapo-0.12.0-cp314-cp314-musllinux_1_2_aarch64.whl", hash = "sha256:e09c5916a83e0d2edca57af78b043fe16898ac63224429cf8a7db81def192f21", size = 6739271, upload-time = "2026-10-24T16:49:11.997Z" },
+    { url = "https://files.pythonhosted.org/packages/77/c7/cccfc08a5cdb6d18b9e7b15558fc9a05184a142673ce8a3325660829882e/tapo-0.12.0-cp314-cp314-musllinux_1_2_armv7l.whl", hash = "sha256:0b1b98fed95515339e813c6ace7334c6f71fd2482a41d93147cf1054da9871cf", size = 6305437, upload-time = "2026-10-24T16:49:13.501Z" },
+    { url = "https://files.pythonhosted.org/packages/1e/c6/3b3722789513bef7ca0d98ce2d87793f11dfc35cd534a629235a6807c15f/tapo-0.12.0-cp314-cp314-musllinux_1_2_i686.whl", hash = "sha256:d711d902cf4a44512704c08f9f95d1e45386dbe4f1dc8fd1a52048fcbe245390", size = 6816544, upload-time = "2026-10-24T16:49:15.026Z" },
+    { url = "https://files.pythonhosted.org/packages/79/47/69731a62c3a52955c8185c500f279bd6d1195aa6edb94ed4344baa479481/tapo-0.12.0-cp314-cp314-musllinux_1_2_x86_64.whl", hash = "sha256:86b57b8d5d3b56cd7d3f3e741753b5ce93c7342ac368e44a909300795ca645f8", size = 7179617, upload-time = "2026-10-24T16:49:17.04Z" },
+    { url = "https://files.pythonhosted.org/packages/53/5e/19af0988adcb694ea7aca2cf79e9bd0226dfd37f72effeafa7c84ba2500c/tapo-0.12.0-cp314-cp314-win_amd64.whl", hash = "sha256:9cd144c458467fd09e6bcc366dd8cead34ff7a8071601c2dfd7fde501f030234", size = 7355678, upload-time = "2026-10-24T16:49:19.227Z" },
+    { url = "https://files.pythonhosted.org/packages/42/0c/6a0b14655153bbb4c1de1a5427d9a17d6e92dd8c0cd6f512486a5bfe55b9/tapo-0.12.0-cp314-cp314-win_arm64.whl", hash = "sha256:8241e24a477dcc723cea539e654763b541db2ea62f34d2b935a9dcfa1f9e97a4", size = 6886768, upload-time = "2026-10-24T16:49:20.846Z" },
+    { url = "https://files.pythonhosted.org/packages/e2/d5/577ed13889bebf6746ba0aeff9a298cb371479a63b60dff8c98586163e43/tapo-0.12.0-cp314-cp314t-manylinux_2_28_aarch64.whl", hash = "sha256:bf899e54faab4636ede1836989d66a13b7a1a583a50f8964ad116445ccd231c2", size = 6581451, upload-time = "2026-10-24T16:49:22.292Z" },
+    { url = "https://files.pythonhosted.org/packages/54/64/b4d20207460e43b91832fbcf2cbe2ff464ccb2965d9811a690c0e2e3741f/tapo-0.12.0-cp314-cp314t-manylinux_2_28_armv7l.whl", hash = "sha256:e6119cd4b15428e482d592eb7d1389356c00872d351042164dfd7fc3c798c7f7", size = 6102591, upload-time = "2026-10-24T16:49:23.799Z" },
+    { url = "https://files.pythonhosted.org/packages/de/3b/ccb1be5c2174d77764badc29876e7364b473e92ae87e5851de9836e346e8/tapo-0.12.0-cp314-cp314t-manylinux_2_28_i686.whl", hash = "sha256:3dbfd33d34dd8a02aec1de746146f9d2c82486cbff0109cebe85750d1beb0ec2", size = 6931351, upload-time = "2026-10-24T16:49:25.257Z" },
+    { url = "https://files.pythonhosted.org/packages/46/29/ded5a373ced52872eeab94da5263772239cc479399640a8ac0419821c29c/tapo-0.12.0-cp314-cp314t-manylinux_2_28_ppc64le.whl", hash = "sha256:0d367b638e36eba5102bf72fc5d31ed1dc1716cfb54f248731a018a87ece2ffa", size = 7196339, upload-time = "2026-10-24T16:49:27.135Z" },
+    { url = "https://files.pythonhosted.org/packages/97/f7/1944f94b77c8fa802c7bd350f085423ffb2c68bc052bb03f26e8f895756a/tapo-0.12.0-cp314-cp314t-manylinux_2_28_s390x.whl", hash = "sha256:ee5b899d5323ea56a4f22a454beecef8bc318e1934fd95e7536bf9149c8e7a53", size = 6620453, upload-time = "2026-10-24T16:49:28.642Z" },
+    { url = "https://files.pythonhosted.org/packages/ef/de/8825e934ebf34b4cfd135f79c03cfa7b50b871b15d9a42762b8d03cd0689/tapo-0.12.0-cp314-cp314t-manylinux_2_28_x86_64.whl", hash = "sha256:3771abca04b5253acba0a5b84aec0d28f769914a469fc69f0c214a93f8456d15", size = 6976451, upload-time = "2026-10-24T16:49:30.363Z" },
+    { url = "https://files.pythonhosted.org/packages/cb/8a/6acb777835e4c0f8d1dab4e060dcc07d424c553cbb855224ebdcc6b44c6d/tapo-0.12.0-cp314-cp314t-musllinux_1_2_aarch64.whl", hash = "sha256:a89771531d7d971e10c97e759e731e1f47cbcd1e1040e40f0c2931af05a5f42f", size = 6765747, upload-time = "2026-10-24T16:49:31.804Z" },
+    { url = "https://files.pythonhosted.org/packages/e4/7e/5d9665d35ae761e4946980a55bff2cb8ca36db94331cb923719ff746e8df/tapo-0.12.0-cp314-cp314t-musllinux_1_2_armv7l.whl", hash = "sha256:65342ec359c8f65cd69eda2b18c893c8654e834f4be98e2d003500cd2d48f37b", size = 6297740, upload-time = "2026-10-24T16:49:33.247Z" },
+    { url = "https://files.pythonhosted.org/packages/37/9f/890e98e357163ad37f9a2ca636e77c8251f06294ef685f9caf215ff4d35e/tapo-0.12.0-cp314-cp314t-musllinux_1_2_i686.whl", hash = "sha256:b4936586b81d3276534aa49e23756012fa5ed224babc6782c3945f48c96b02ed", size = 6807337, upload-time = "2026-10-24T16:49:34.923Z" },
+    { url = "https://files.pythonhosted.org/packages/93/b3/7686ff6ba1730544cb113bdc960bb255b4454b332bf3bcaca5ec0975fb8f/tapo-0.12.0-cp314-cp314t-musllinux_1_2_x86_64.whl", hash = "sha256:fabcfc3dcebf3985d5c5592f0cb2ae7c55daf22a3e97969aa8815bb6a0f17ff2", size = 7195558, upload-time = "2026-10-24T16:49:36.584Z" },
+    { url = "https://files.pythonhosted.org/packages/01/55/8b473410664e980bbfe5a7859a0e61a0a0aeddf8f373ff801d3aa1314bc8/tapo-0.12.0-cp315-cp315-macosx_11_0_arm64.whl", hash = "sha256:bcd42b09bf6e47bc7577c48bd282cd508a3489e05a2d797c34f2acb019493245", size = 6381498, upload-time = "2026-10-24T16:49:38.504Z" },
+    { url = "https://files.pythonhosted.org/packages/f6/2a/64b500bf373ef8d7bee30e9496a254e88de6677106a89066796022f56b27/tapo-0.12.0-cp315-cp315-manylinux_2_28_i686.whl", hash = "sha256:2c2e225e609bee5b61b74554a87ca8006cfea2fbaffe872571ba266767ef090d", size = 6945145, upload-time = "2026-10-24T16:49:39.895Z" },
+    { url = "https://files.pythonhosted.org/packages/f5/fc/6b0b667cdb4363cfa4c4a41625eed65bc0b3ba146a0145b64b4ae7a58540/tapo-0.12.0-cp315-cp315-manylinux_2_28_x86_64.whl", hash = "sha256:5226bb8b95d28b287847e7fbd77b52af02894c7ed1cea6c6b87a3015d122c37c", size = 6957183, upload-time = "2026-10-24T16:49:41.652Z" },
+    { url = "https://files.pythonhosted.org/packages/af/ff/fe9902d572012dda1486a89ca51ebf85ab488f8a71b4473176395a87bbf2/tapo-0.12.0-cp315-cp315-win_amd64.whl", hash = "sha256:5757cbbe9e2b38f8f71657409dddaa3f57fc9687b7b790341f69f5ca8d4f2de4", size = 7355872, upload-time = "2026-10-24T16:49:43.243Z" },
+    { url = "https://files.pythonhosted.org/packages/63/0f/c77e8fd15ed77e26d02184258cb4c658e016edd213e519e1b971b177fde9/tapo-0.12.0-cp315-cp315-win_arm64.whl", hash = "sha256:f99bad2a30a2b0ccfd92c3198f97771fa361281287eeb63dc8c3cade2a340315", size = 6887258, upload-time = "2026-10-24T16:49:44.871Z" },
+    { url = "https://files.pythonhosted.org/packages/76/e1/0c416e9dce82bcb7f9ea0a5fa36b704d78baf6662d3994175f2e7a27769f/tapo-0.12.0-cp315-cp315t-manylinux_2_28_i686.whl", hash = "sha256:8a50235e483597a53b4972a6d4f862c471841507eb079027003a30fdef553e38", size = 6930819, upload-time = "2026-10-24T16:49:46.316Z" },
+    { url = "https://files.pythonhosted.org/packages/10/de/1da9625a584f7eec7995a6b08ad391b1d809505e42e0022937527dc5f7cc/tapo-0.12.0-cp315-cp315t-manylinux_2_28_x86_64.whl", hash = "sha256:783bc2531918884d0da73235dacb013d802011e380a201cd4bc0df1972999a83", size = 6976343, upload-time = "2026-10-24T16:49:47.725Z" },
+    { url = "https://files.pythonhosted.org/packages/f5/ef/c4c6b0e8103a2a8012527107e3e12d39ae3d603525d03bffd7c420e23e8b/tapo-0.12.0-pp311-pypy311_pp73-manylinux_2_28_aarch64.whl", hash = "sha256:2be953184a70f56360729f7c42e5338184ed22fb91dc447367f817ecacf22c04", size = 6603770, upload-time = "2026-10-24T16:49:49.145Z" },
+    { url = "https://files.pythonhosted.org/packages/63/62/5b81b2ccecb3689f8c26fa5841ff7b9a4c126e1a2778eee0d2f279635af1/tapo-0.12.0-pp311-pypy311_pp73-manylinux_2_28_armv7l.whl", hash = "sha256:1b1858e1f449787ff6117c07b7eb1896be16aeebd284de63625fbc11e5974e86", size = 6120771, upload-time = "2026-10-24T16:49:50.647Z" },
+    { url = "https://files.pythonhosted.org/packages/1b/f4/77e9935ddf100cf064c47abbb22bebd3b3484ddf422a539b15c428e0dfeb/tapo-0.12.0-pp311-pypy311_pp73-manylinux_2_28_i686.whl", hash = "sha256:f9851d6ff12d79aceb52cdc415908e9dfcb10d7289345f32f49b3a271db35650", size = 6971539, upload-time = "2026-10-24T16:49:52.141Z" },
+    { url = "https://files.pythonhosted.org/packages/df/0d/c7ad31cb5fdd07497336cc1e7fb6f01fb651bc8e1b02e82e3fc2cd2b52e2/tapo-0.12.0-pp311-pypy311_pp73-manylinux_2_28_ppc64le.whl", hash = "sha256:ae5bfc0717be175e80ee00e96b4be472763c4dc0e6db76afe9a03f9c34075a3e", size = 7236430, upload-time = "2026-10-24T16:49:54.075Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/da/081f0565329ce2a93d637e4987ac3728e778512d6810ed524702ee355097/tapo-0.12.0-pp311-pypy311_pp73-manylinux_2_28_s390x.whl", hash = "sha256:0245805cd4542c74ccfea6b5814a82f1f688454cc938f8031b5ea674c4ef79a4", size = 6635362, upload-time = "2026-10-24T16:49:55.677Z" },
+    { url = "https://files.pythonhosted.org/packages/13/7b/33b295ff818af539727abd1be9ac5f7135f88a760e15632c720d5c467d2b/tapo-0.12.0-pp311-pypy311_pp73-manylinux_2_28_x86_64.whl", hash = "sha256:2aee90761bd4c00d4986f9c5e6405a042cf0293fc5df280ec632ee8ea523814a", size = 7004664, upload-time = "2026-10-24T16:49:57.172Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/74/287d5fb1e7079f593afd3e6144f92b90c9a398d5e24b7c2eddf16b1ffaab/tapo-0.12.0-pp311-pypy311_pp73-musllinux_1_2_aarch64.whl", hash = "sha256:9bd5ef81cbe882d0e3009a648094b3b95a9a4f0ed59d1428355de48d623eed5f", size = 6792414, upload-time = "2026-10-24T16:49:58.641Z" },
+    { url = "https://files.pythonhosted.org/packages/f4/2c/d725f4d65f2d4e2129b4bf1e50efa7a78071a5c56d2db3970fb3a1655404/tapo-0.12.0-pp311-pypy311_pp73-musllinux_1_2_armv7l.whl", hash = "sha256:a9f0a44c799787d5c8f2a6091945de398fe14fda5afb39536b47b9d470395faf", size = 6317429, upload-time = "2026-10-24T16:50:00.171Z" },
+    { url = "https://files.pythonhosted.org/packages/ae/f5/041b572ce1ca55c02bc999a602f624c387415a976caad30b7c6f19ae21d3/tapo-0.12.0-pp311-pypy311_pp73-musllinux_1_2_i686.whl", hash = "sha256:321cd1242320501ea162ab36b3960a5274d950725a04104893c8ee84cccf604a", size = 6845854, upload-time = "2026-10-24T16:50:02.551Z" },
+    { url = "https://files.pythonhosted.org/packages/ec/69/988880a86ecafc01b8f39e588926fba4e733a5ae905445e5f69f99b95dbb/tapo-0.12.0-pp311-pypy311_pp73-musllinux_1_2_x86_64.whl", hash = "sha256:c35d67883d072f19da0512bd53b16d61b4a8979df1d5db86003b370e66f368cd", size = 7223644, upload-time = "2026-10-24T16:50:04.856Z" },
+]
+
+[[package]]
+name = "tzdata"
+version = "2026.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d9/68/f1b440335057bfce71b6e50a9d09445aa2ecbd08359a337976627b8409e7/tzdata-2026.5.tar.gz", hash = "sha256:8cc73c0a0bfca7dbfa59235d60b2eff82231dee33f53d206db1acd9173cfc0a7", size = 200404, upload-time = "2026-10-03T09:23:14.143Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/94/21/1e5995a1c920cce14e4bffae20c665ec10e7ed03ab25e006cd741092b718/tzdata-2026.5-py2.py3-none-any.whl", hash = "sha256:b683bd1b6659ddcd810ff02ad09ba821d4bf1065072805063eb35c49617905ac", size = 347996, upload-time = "2026-10-03T09:23:12.535Z" },
+]
